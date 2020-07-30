@@ -4,6 +4,18 @@ import scrapy
 # title = //h1[@class="documentFirstHeading"]/text()
 # paragraph = //div[@class="field-item even"]//p[not(@class)]/text()
 
+# API_KEY = El apikey que te da Scrapyhub
+# PROJECT_ID = El id del proyecto que te da junto con el API_KEY
+# NAME_SPIDER = Es el nombre que tu le pusiste al spider en su variable name.
+# SPIDER_ID = Es el numero de lz izquieda de la columna job del spider en este caso de la cia solo tenemos 1 spider, tipo 1/2 significa 1 spider / 2 jobs
+# SPIDER_NUMBER = Es el numero de job del spider en este caso nos traeriamos el 2, tipo 1/2
+
+# Para ejecutar el spider que esta alojado dentro de scrapyhub se ejecuta el siguiente comando en la consola o tambien se puede dejar programado con un cronjob en algun servidor.
+# curl -u API_KEY: https://app.scrapinghub.com/api/run.json -d project=PROJECT_ID -d spider=NAME_SPIDER
+
+# Se ejecuta y traer los datos del spider dependiendo de los parametros entregados.
+# curl -u API_KEY: https://storage.scrapinghub.com/items/PROJECT_ID/SPIDER_ID/SPIDER_NUMBER
+
 
 class SpiderCIA(scrapy.Spider):
     name = 'cia'
